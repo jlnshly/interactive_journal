@@ -14,5 +14,11 @@ class InteractiveJournal:
             if not self.entries:
                 return False
             try:
-                
+                with open(self.filename, "a") as file:
+                    for line in self.entries:
+                        file.write(line + "\n")
+                return True
+            except Exception as e:
+                print(f"Error saving your entry: {e}")
+                return False
 
