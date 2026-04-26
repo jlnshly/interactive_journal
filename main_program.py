@@ -7,13 +7,13 @@ def start_interactive_journal():
     active = True
     while active:
         user_input = input('Enter line: ')
-        journal.add_entry = user_input
+        journal.add_entry(user_input)
         choice = input('Would you like to add more lines (y/n): ').lower().strip()
         if choice == 'n':
             active = False
         elif choice != 'y':
             print('Invalid input. Exiting...')
-            exit()
+            return
     print('Let me finalize your entries...')
     time.sleep(1)
     if journal.save_entry():
