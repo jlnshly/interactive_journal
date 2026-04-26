@@ -8,7 +8,7 @@ def start_interactive_journal():
     while active:
         user_input = input('Enter line: ')
         journal.add_entry = user_input
-        choice = input('Would you like to add more lines (y/n): y or n').lower().strip()
+        choice = input('Would you like to add more lines (y/n): ').lower().strip()
         if choice == 'n':
             active = False
         elif choice != 'y':
